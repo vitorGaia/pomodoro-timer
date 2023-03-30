@@ -3,9 +3,10 @@ import './Timer.css'
 
 class Timer extends Component {
   state = {
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    inputHours: '',
+    inputMinutes: '',
+    inputSeconds: '',
+    display: '00:00:00'
   }
 
   handleChange = ({target}) => {
@@ -15,16 +16,46 @@ class Timer extends Component {
   }
 
   goCountdown = () => {
-    const { hours, minutes, seconds } = this.state;
-    const fullTimeInSeconds = (+hours * 60 * 60) + (+minutes * 60) + (+seconds);
-    console.log(fullTimeInSeconds);
+    const { inputHours, inputMinutes, inputSeconds } = this.state;
+    const fullTimeInSeconds = (+inputHours * 60 * 60) + (+inputMinutes * 60) + (+inputSeconds);
+    this.timer(fullTimeInSeconds)
+  }
+
+  timer = (duration) => {
+    let timer = duration;
+
+    setInterval(() => {
+      let hoursCalc = Math.floor((timer / 60) / 60);
+      let minutesCalc = Math.floor((timer / 60));
+      let secondsCalc = Math.floor(timer % 60);
+
+      hoursCalc = hoursCalc < 10 ? '0' + hoursCalc : hoursCalc;
+      minutesCalc = minutesCalc < 10 ? '0' + minutesCalc : minutesCalc;
+      secondsCalc = secondsCalc < 10 ? '0' + secondsCalc : secondsCalc;
+
+      this.setState({
+        display: `${hoursCalc} : ${minutesCalc} : ${secondsCalc}`,
+        inputHours: '',
+        inputMinutes: '',
+        inputSeconds: '',
+      });
+
+      timer -= 1;
+
+      if (timer < 0) {
+        this.setState({
+          display: 'ACABOU!',
+        })
+      }
+    }, 1000);
   }
 
   render() {
+    const { inputHours, inputMinutes, inputSeconds, display } = this.state;
     return (
       <main>
         <div>
-          <p>00:00:00</p>
+          <p>{ display }</p>
         </div>
 
         <div>
@@ -32,10 +63,11 @@ class Timer extends Component {
             Hours
             <input
               type="number"
-              name="hours"
+              name="inputHours"
               max="24"
               min="0"
               onChange={this.handleChange}
+              value={inputHours}
             />
           </label>
 
@@ -43,10 +75,11 @@ class Timer extends Component {
             Minutes
             <input
               type="number"
-              name="minutes"
+              name="inputMinutes"
               max="59"
               min="0"
               onChange={this.handleChange}
+              value={inputMinutes}
             />
           </label>
 
@@ -54,10 +87,11 @@ class Timer extends Component {
             Seconds
             <input
               type="number"
-              name="seconds"
+              name="inputSeconds"
               max="59"
               min="0"
               onChange={this.handleChange}
+              value={inputSeconds}
             />
           </label>
         </div>
