@@ -1,10 +1,110 @@
+@font-face {
+  font-family: "Digital";
+  src: url("../src/fonts/digital-7.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tillana&display=swap');
+
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(1,5,14,1) 1%, rgba(32,16,27,1) 88%, rgba(34,2,12,1) 96%, rgba(32,1,1,1) 100%);
+  font-family: 'Tillana', cursive;
+}
+
+main .div-background {
+  height: 80%;
+  width: 70%;
+  border-radius: 5px;
+  background: linear-gradient(to left, #061161, #780206);
+  background-repeat: repeat;
+  background-size: cover;
+  box-shadow: 8px 8px 14px #0a0a0f, -8px -8px 14px #070b20;
+}
+
+main .show-count-container {
+  width: 100%;
+  height: 65%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(127, 255, 212, 0.04);
-  gap: 50px;
+  background-color: transparent;
+}
+
+main .show-count-container p {
+  background-color: transparent;
+  height: 80%;
+  width: 70%;
+  font-size: 11vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Digital", sans-serif;
+}
+
+main .div-background .control-panel {
+  background-color: transparent;
+  height: 35%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main .div-background .control-panel .inputs-container { 
+  background-color: transparent;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+main .div-background .control-panel .buttons-container { 
+  background-color: transparent;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.inputs-container label {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+}
+
+.inputs-container label input {
+  width: 50%;
+  height: 60%;
+  border-radius: 5px;
+  background-color: #17182044;
+  border: none;
+  border-bottom: solid 2px #171820;
+  text-align: center;
+}
+
+.buttons-container button {
+  width: 20%;
+  height: 50%;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  border: solid 2px #171820;
+  font-family: 'Tillana', cursive;
+  font-size: medium;
+}
+
+.buttons-container button:hover {
+  background-color: #1c1e2750;
 }
