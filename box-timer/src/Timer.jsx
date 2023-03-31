@@ -49,8 +49,8 @@ class Timer extends Component {
       });
 
       timer -= 1;
-
-      if (timer <= 0) {
+      const { itsTime } = this.state;
+      if (timer <= 0 || !itsTime) {
         this.setState({
           display: 'E N D !',
           itsTime: false,
