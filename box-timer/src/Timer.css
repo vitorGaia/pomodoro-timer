@@ -12,7 +12,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: radial-gradient(circle, rgba(1,5,14,1) 1%, rgba(32,16,27,1) 88%, rgba(34,2,12,1) 96%, rgba(32,1,1,1) 100%); */
   font-family: 'Tillana', cursive;
   background: linear-gradient(45deg, #16213E, #16213E, #83142C, #FF6464);
   background-size: 300% 300%;
@@ -36,7 +35,6 @@ main .div-background {
   width: 70%;
   border-radius: 15px;
   background-color: transparent;
-  /* background: linear-gradient(to left, #061161, #780206); */
   background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
   background-repeat: repeat;
   background-size: cover;
@@ -95,7 +93,7 @@ main .div-background .control-panel .inputs-container {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 30px;
+  gap: 5%;
 }
 
 main .div-background .control-panel .buttons-container { 
@@ -114,9 +112,9 @@ main .div-background .control-panel .buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 10%;
   background-color: transparent;
-  font-size: 110%;
+  font-size: 100%;
   font-family: 'Sarabun', sans-serif;
 }
 
@@ -128,10 +126,11 @@ main .div-background .control-panel .buttons-container {
   border: none;
   border-bottom: solid 1px antiquewhite;
   text-align: center;
+  min-width: 50px;
 }
+
 .inputs-container label input:hover {
   background-color: #38136d61;
-  /* transform: scale(1.02); */
 }
 
 .buttons-container button {
@@ -142,7 +141,7 @@ main .div-background .control-panel .buttons-container {
   border: none;
   border: solid 1px antiquewhite;
   font-family: 'Sarabun', sans-serif;
-  font-size: 110%;
+  font-size: 95%;
   font-weight: 500;
 }
 
