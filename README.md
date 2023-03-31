@@ -1,4 +1,4 @@
-# ⏱️ Boas vindas ao repositório 🍅Pomodoro-timer⏱️, criei essa aplicação simples para um pequeno desafio da Trybe (https://www.betrybe.com/);
+⏱️ Boas vindas ao repositório 🍅Pomodoro-timer⏱️, criei essa aplicação simples para um pequeno desafio da Trybe (https://www.betrybe.com/);
 
 - A idea inicial era um timer para usarmos nos intervalos das aulas, fiz a aplicação em uma 🌅tarde/noite🌃, a maior parte do tempo foi fazendo estilização, tenho um grave problema de sempre tentar fazer coisas que estão além do meu nivel em css, acabo demorando muito e não obtenho o resultado que ta na minha cabeça, mas a cada falha estou melhorando com css;
 
@@ -8,9 +8,9 @@
 
 - Este é meu linkedin (https://www.linkedin.com/in/vitor-gaia-dev/), aceito quealquer sugestão ou critica construtiva.
 
-=================================================================================================
 
-# ⏱️ Welcome to the 🍅Pomodoro-timer⏱️ repository, I created this simple application for a small Trybe challenge (https://www.betrybe.com/);
+
+⏱️ Welcome to the 🍅Pomodoro-timer⏱️ repository, I created this simple application for a small Trybe challenge (https://www.betrybe.com/);
 
 - The initial idea was a timer to use between classes, I applied it in one 🌅afternoon/night🌃, most of the time I spent styling, I have a serious problem of always trying to do things that are beyond my level in css, I end up taking a long time and I don't get the result that's in my head, but with each failure I'm improving with css;
 
