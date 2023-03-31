@@ -71,6 +71,10 @@ class Timer extends Component {
     return (
       <main>
         <div className='div-background' style={backgroundStyle}>
+          {
+            itsTime && <button className='timer-btn-close' onClick={() => this.setState({ itsTime: false })}>X</button>
+          }
+
           <div className="show-count-container">
             <p style={fontColorStyle}>{ display }</p>
           </div>
@@ -115,11 +119,11 @@ class Timer extends Component {
             </div>
 
             <div className='buttons-container' style={displayNone}>
-              <button onClick={() => this.timer(300)} style={fontColorStyle2}>1x Round - 5m</button>
+              <button onClick={() => this.timer(1800)} style={fontColorStyle2}>Pomodoro - 30m 🍅</button>
 
-              <button onClick={() => this.timer(600)} style={fontColorStyle2}>2x Rounds - 10m</button>
+              <button onClick={() => this.timer(600)} style={fontColorStyle2}>Interval - 10m ☕</button>
 
-              <button id="btn-go" onClick={this.goCountdown} style={fontColorStyle2}>It's Time!</button>
+              <button id="btn-go" onClick={this.goCountdown} style={fontColorStyle2}>I choose! 🫡</button>
             </div>
           </div>
         </div>

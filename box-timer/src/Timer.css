@@ -3,7 +3,7 @@
   src: url("../src/fonts/digital-7.ttf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Tillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;1,300&display=swap');
 
 main {
   width: 100vw;
@@ -12,18 +12,52 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(1,5,14,1) 1%, rgba(32,16,27,1) 88%, rgba(34,2,12,1) 96%, rgba(32,1,1,1) 100%);
+  /* background: radial-gradient(circle, rgba(1,5,14,1) 1%, rgba(32,16,27,1) 88%, rgba(34,2,12,1) 96%, rgba(32,1,1,1) 100%); */
   font-family: 'Tillana', cursive;
+  background: linear-gradient(45deg, #16213E, #16213E, #83142C, #FF6464);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 main .div-background {
   height: 80%;
   width: 70%;
-  border-radius: 5px;
-  background: linear-gradient(to left, #061161, #780206);
+  border-radius: 15px;
+  background-color: transparent;
+  /* background: linear-gradient(to left, #061161, #780206); */
+  background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
   background-repeat: repeat;
   background-size: cover;
-  box-shadow: 8px 8px 14px #0a0a0f, -8px -8px 14px #070b20;
+  box-shadow:  -4px 6px 14px #171820, 4px -6px 14px #00000036;
+  opacity: 0.7;
+  position: relative;
+}
+
+.timer-btn-close {
+  background-color: transparent;
+  color: #83142C;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 500;
+}
+
+.timer-btn-close:hover {
+  background-color: #83142c29;
 }
 
 main .show-count-container {
@@ -39,7 +73,7 @@ main .show-count-container p {
   background-color: transparent;
   height: 80%;
   width: 70%;
-  font-size: 11vw;
+  font-size: 11.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,31 +114,39 @@ main .div-background .control-panel .buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   background-color: transparent;
+  font-size: 110%;
+  font-family: 'Sarabun', sans-serif;
 }
 
 .inputs-container label input {
   width: 50%;
-  height: 60%;
+  height: 50%;
   border-radius: 5px;
   background-color: #17182044;
   border: none;
-  border-bottom: solid 2px #171820;
+  border-bottom: solid 1px antiquewhite;
   text-align: center;
+}
+.inputs-container label input:hover {
+  background-color: #38136d61;
+  /* transform: scale(1.02); */
 }
 
 .buttons-container button {
   width: 20%;
   height: 50%;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: transparent;
   border: none;
-  border: solid 2px #171820;
-  font-family: 'Tillana', cursive;
-  font-size: medium;
+  border: solid 1px antiquewhite;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 110%;
+  font-weight: 500;
 }
 
 .buttons-container button:hover {
-  background-color: #1c1e2750;
+  background-color: #38136dbb;
+  transform: scale(1.02);
 }
