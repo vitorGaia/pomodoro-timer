@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Timer.css'
 import sound from './audio/gongoAudio.mp3';
+import backgroundGif from './images/backgroundGif.gif';
 
 class Timer extends Component {
   state = {
@@ -63,8 +64,8 @@ class Timer extends Component {
 
   render() {
     const { inputHours, inputMinutes, inputSeconds, display, itsTime } = this.state;
-    const backgroundStyle = { backgroundImage: itsTime && "url('https://thumbs.gfycat.com/InfiniteMajorEarthworm-size_restricted.gif')" };
-    const fontColorStyle = { color: itsTime && '#a51b0b' };
+    const backgroundStyle = { backgroundImage: itsTime && `url(${backgroundGif})` };
+    const fontColorStyle = { color: itsTime && '#16213E' };
     const fontColorStyle2 = { color: itsTime && '#171820' };
     const displayNone = { display: itsTime && 'none' }
 
